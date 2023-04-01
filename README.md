@@ -1,8 +1,12 @@
 # Stella Operating System
-A distribution designed for Home Theater PCs.  
-It's built on top of Arch and features KDE Plasma Bigscreen.  
-  
-- Calamares Installer
+A Home Theater PC post-install script.  
+Utilizes Arch and KDE Plasma Bigscreen.  
+
+# Install list 
 - Plasma Bigscreen
 - Kodi
 - Steam
+
+# To-do
+- [ ] Add support for Ubuntu and Ubuntu flavors
+- [ ] Add support for Fedora and Fedora flavors
