@@ -1,4 +1,4 @@
-# Stella Post-Install
+# Stella Post-Install Script
 A Home Theater PC post-install script.  
 Utilizes Arch and KDE Plasma Bigscreen.  
 
@@ -14,4 +14,3 @@ Utilizes Arch and KDE Plasma Bigscreen.
 At the moment I have no plans to support other distros. Right now Plasma Bigscreen is easier to work with on Arch than other distros (AUR is the best!), but that doesn't mean I won't change my mind in the feature. 
 
 # To-do
-
