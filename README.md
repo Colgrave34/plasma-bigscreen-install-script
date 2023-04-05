@@ -2,7 +2,7 @@
 A Home Theater PC post-install script.  
 Utilizes Arch and KDE Plasma Bigscreen.  
   
-**This project is under construction**  
+**This project is under construction!**  
 
 # Install list 
 - Plasma Bigscreen
