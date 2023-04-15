@@ -3,13 +3,20 @@ A Home Theater PC post-install script.
 Utilizes Arch and KDE Plasma Bigscreen.  
   
 **This project is under construction!**  
-
+  
+To use this post-install script, it is assumed that you have a functional Arch Linux system logged in as a regular user with sudo privileges, and have internet connectivity and systemd installed.  
+  
+Please note that this post-install script merely provides the essential components for operating Plasma Bigscreen and Kodi.  
+It does not eliminate the need for configuring Plasma Bigscreen, Kodi or the whole system.  
+  
+This post-install script is intended for people who have experience with Linux, and **I am not liable if you break your operating system**.  
+To learn all the commands included in this post-install script, please visit the [Arch wiki](https://wiki.archlinux.org/).  
+  
 # Install list 
-- Plasma Bigscreen
-- Kodi
-- Steam
-- Flatpak
-- ProtonUp-Qt
+- [Plasma Bigscreen](https://aur.archlinux.org/packages/plasma-bigscreen-git)
+- [Kodi](https://kodi.tv/)
+- [Steam](https://wiki.archlinux.org/title/steam)
+- [Flatpak](https://flatpak.org/setup/Arch)
   
 # Q&A
 ## Would you support other distros? Like Fedora or Ubuntu? 
