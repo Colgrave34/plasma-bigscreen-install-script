@@ -3,7 +3,7 @@ echo "Installing SDDM as display manager..."
 sudo pacman -Syu sddm
 
 echo "Installing dependencies..."
-sudo pacman -Syu base-devel plasma-pa plasma-nm konsole systemsettings
+sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
