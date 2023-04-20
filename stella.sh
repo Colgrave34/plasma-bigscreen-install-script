@@ -1,7 +1,4 @@
 #!/bin/bash
-echo "Installing fakeroot"
-sudo pacman -Syu fakeroot
-
 echo "Installing SDDM as display manager..."
 sudo pacman -Syu sddm
 
