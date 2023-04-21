@@ -27,7 +27,7 @@ echo "Installing Kodi"
 sudo pacman -S kodi
 
 echo "Enabling multilib and install steam..."
-sudo bash -c 'cat << EOF >>
+sudo bash -c 'cat << EOF >> /etc/pacman.conf
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 EOF'
