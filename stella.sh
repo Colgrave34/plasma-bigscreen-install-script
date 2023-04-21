@@ -1,4 +1,8 @@
 #!/bin/bash
+echo "To use this post-install script, it is assumed that you have a functional Arch Linux system logged in as a regular user with sudo privileges, and have internet connectivity and systemd installed."
+echo "Please note that this post-install script merely provides the essential components for operating Plasma Bigscreen and Kodi."
+echo "It does not eliminate the need for configuring Plasma Bigscreen, Kodi or the whole system."
+
 echo "Installing SDDM as display manager..."
 sudo pacman -Syu sddm
 
