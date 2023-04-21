@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Installing SDDM as display manager..."
-sudo pacman -Syu fakeroot sddm
+sudo pacman -Syu sddm
 
 echo "Installing dependencies..."
 sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
