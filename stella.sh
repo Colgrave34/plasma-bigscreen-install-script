@@ -1,11 +1,9 @@
 #!/bin/bash
 echo "Installing SDDM as display manager..."
 sudo pacman -Syu sddm
-y
 
 echo "Installing dependencies..."
 sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
-y
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
@@ -27,7 +25,6 @@ sudo pacman -Rs extra-cmake-modules-git
 
 echo "Installing Kodi"
 sudo pacman -S kodi
-y
 
 echo "Enabling multilib and install steam..."
 sudo bash -c 'cat << EOF >>
@@ -35,11 +32,9 @@ sudo bash -c 'cat << EOF >>
 Include = /etc/pacman.d/mirrorlist
 EOF'
 sudo pacman -Syu steam
-y
 
 echo "Installing Flatpak"
 sudo pacman -S flatpak
-y
 
 echo "Install completed!"
 echo "Please run SDDM and make sure everything running correctly."
