@@ -19,6 +19,7 @@ echo "Checking updates..."
 sleep 2
 echo "y" | sudo pacman -Syu
 
+
 # Ask user input for installing SDDM
 while true
 do
