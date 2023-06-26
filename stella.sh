@@ -73,10 +73,6 @@ sudo pacman -S flatpak
 
 echo "Install completed!"
 echo "Please run SDDM and make sure everything running correctly."
-echo "To run SDDM:"
-echo "sudo systemctl start sddm"
-echo "To enable SDDM:"
-echo "sudo systemctl enable sddm"
 
 echo "If you'd like to autologin, consider to read this part of the wiki."
 echo "https://wiki.archlinux.org/title/SDDM#Autologin"
