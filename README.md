@@ -16,14 +16,13 @@ To learn all the commands included in this post-install script, please visit the
 # Instruction
 Run the following command:
 ```
-bash <(curl -s https://codeberg.org/Colgrave/stella-post-install/raw/branch/main/stella.sh)
+bash <(curl -s https://codeberg.org/Colgrave/stella/raw/branch/main/stella.sh)
 ```
 
 # Install list
 - [Plasma Bigscreen](https://aur.archlinux.org/packages/plasma-bigscreen-git)
 - [Kodi](https://kodi.tv/)
 - [Steam](https://wiki.archlinux.org/title/steam)
-- [Flatpak](https://flatpak.org/setup/Arch)
   
 # Q&A
 ## Would you support other distros? Like Fedora or Ubuntu? 
