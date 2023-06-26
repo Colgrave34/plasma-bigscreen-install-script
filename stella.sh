@@ -10,8 +10,8 @@ echo " ___/ / /_/  __/ / / /_/ / ";
 echo "/____/\__/\___/_/_/\__,_/  ";
 echo "                           ";
 
-# echo "To use this post-install script, it is assumed that you have a functional Arch Linux system logged in as a regular user with sudo privileges, and have internet connectivity and systemd installed."
-# echo -e "Please note that this post-install script merely provides only the essential components for operating Plasma Bigscreen and Kodi.\n"
+echo "You must have a functional Arch system logged in as a regular user with sudo privileges."
+echo "Please note that this post-install script provides only the essential components for operating Plasma Bigscreen and Kodi."
 
 # echo "Do you want me to install SDDM display manager for you?"
 
