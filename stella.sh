@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Stella Post-Install Script
+# A HTPC Post-Install script for Arch Linux.
+
 echo "   _____ __       ____     ";
 echo "  / ___// /____  / / /___ _";
 echo "  \__ \/ __/ _ \/ / / __ \`/";
