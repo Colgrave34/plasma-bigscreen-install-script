@@ -14,29 +14,40 @@ echo "You must have a functional Arch system logged in as a regular user with su
 echo -e "This post-install script only provides the essentials for Plasma Bigscreen and Kodi.\n"
 
 
-# Ask user input for installing SDDM or not
+# Ask user input for installing SDDM
 while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
     case $sddm in
-        Y|y ) echo "Installing SDDM"; sleep 2; echo -e  "\ny" | sudo pacman -Syu sddm;;
+        Y|y ) echo "Installing SDDM"; sleep 2; echo -e  "\ny" | sudo pacman -S sddm;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
 done
 
 
-# Ask user input for installing Flatpak or not
+# Ask user input for installing Flatpak
 while true
 do
     read -p "Do you want to install Flatpak? (y/n): " flatpak
     case $flatpak in
-        Y|y ) echo "Installing Flatpak"; sleep 2; echo -e  "\ny" | sudo pacman -Syu flatpak;;
+        Y|y ) echo "Installing Flatpak"; sleep 2; echo -e  "\ny" | sudo pacman -S flatpak;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
 done
 
+
+# Ask user input for installing Kodi
+while true
+do
+    read -p "Do you want to install Kodi? (y/n): " kodi
+    case $kodi in
+        Y|y ) echo "Installing Kodi"; sleep 2; echo -e  "\ny" | sudo pacman -S kodi;;
+        N|n ) break;;
+        * ) echo "Invalid input";;
+    esac
+done
 
 # Install dependencies
 echo -e "Installing dependencies...\n"
@@ -69,9 +80,6 @@ rm -r extra-cmake-modules-git/ &&
 rm -r plasma-bigscreen-git/ &&
 rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
 sudo pacman -Rs extra-cmake-modules-git
-
-echo "Installing Kodi"
-sudo pacman -S kodi
 
 echo "Enabling multilib and install steam..."
 sudo bash -c 'cat << EOF >> /etc/pacman.conf
