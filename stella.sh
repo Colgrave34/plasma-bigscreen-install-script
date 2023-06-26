@@ -7,6 +7,7 @@ echo " ___/ / /_/  __/ / / /_/ / ";
 echo "/____/\__/\___/_/_/\__,_/  ";
 echo "                           ";
 
+
 echo "Stella Post-Install Script"
 echo -e "A HTPC Post-Install script for Arch Linux.\n"
 echo "You must have a functional Arch system logged in as a regular user with sudo privileges."
