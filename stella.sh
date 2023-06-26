@@ -14,24 +14,17 @@ echo "You must have a functional Arch system logged in as a regular user with su
 echo -e "This post-install script only provides the essentials for Plasma Bigscreen and Kodi.\n"
 
 
+# Check updates
+echo "Checking updates..."
+sleep 2
+echo "y" | sudo pacman -Syu
+
 # Ask user input for installing SDDM
 while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
     case $sddm in
         Y|y ) echo "Installing SDDM"; sleep 2; echo -e  "\ny" | sudo pacman -S sddm;;
-        N|n ) break;;
-        * ) echo "Invalid input";;
-    esac
-done
-
-
-# Ask user input for installing Flatpak
-while true
-do
-    read -p "Do you want to install Flatpak? (y/n): " flatpak
-    case $flatpak in
-        Y|y ) echo "Installing Flatpak"; sleep 2; echo -e  "\ny" | sudo pacman -S flatpak;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -48,6 +41,7 @@ do
         * ) echo "Invalid input";;
     esac
 done
+
 
 # Install dependencies
 echo -e "Installing dependencies...\n"
