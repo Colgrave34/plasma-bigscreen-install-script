@@ -17,7 +17,7 @@ echo -e "This post-install script only provides the essentials for Plasma Bigscr
 # Check updates
 echo "Checking updates..."
 sleep 2
-echo "y" | sudo pacman -Syu
+yes | sudo pacman -Syu
 
 
 # Ask user input for installing SDDM
