@@ -14,7 +14,7 @@ echo "You must have a functional Arch system logged in as a regular user with su
 echo -e "This post-install script only provides the essentials for Plasma Bigscreen and Kodi.\n"
 
 
-# Ask the user input for installing SDDM or not.
+# Ask the user input for installing SDDM or not
 while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
@@ -26,12 +26,13 @@ do
 done
 
 
-# Install dependencies.
+# Install dependencies
 echo -e "Installing dependencies...\n"
 sleep 2
 echo -e "\n\n\n\ny" | sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 
-# Install extra-cmake-modules dependency.
+
+# Install extra-cmake-modules dependency
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
@@ -39,7 +40,7 @@ makepkg -sir
 cd
 
 
-# Build KDE Bigscreen.
+# Build KDE Bigscreen
 echo "Building and installing KDE Bigscreen..."
 sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plasma-bigscreen-git.tar.gz
@@ -49,7 +50,7 @@ makepkg -sir
 cd
 
 
-# Clean up.
+# Clean up
 echo "Cleaning up..."
 sleep 2
 rm -r extra-cmake-modules-git/ &&
