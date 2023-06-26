@@ -13,13 +13,15 @@ echo "                           ";
 echo "You must have a functional Arch system logged in as a regular user with sudo privileges."
 echo -e "This post-install script only provides the essential components for Plasma Bigscreen and Kodi.\n"
 
-read -p "Do you want to install SDDM display manager? (y/n): " sddm
-
-case $sddm in
-    Y|y ) echo "Installing SDDM..."; sudo pacman -Syu sddm;;
-    N|n ) break;;
-    * ) echo "Invalid input";;
-esac
+while true
+do
+    read -p "Do you want to install SDDM display manager? (y/n): " sddm
+    case $sddm in
+        Y|y ) echo "Installing SDDM..."; sudo pacman -Syu sddm;;
+        N|n ) break;;
+        * ) echo "Invalid input";;
+    esac
+done
 
 # echo "Installing dependencies..."
 # sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
