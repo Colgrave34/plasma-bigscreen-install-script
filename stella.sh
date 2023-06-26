@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Stella Post-Install Script
-# A HTPC Post-Install script for Arch Linux.
-
 echo "   _____ __       ____     ";
 echo "  / ___// /____  / / /___ _";
 echo "  \__ \/ __/ _ \/ / / __ \`/";
@@ -10,6 +7,8 @@ echo " ___/ / /_/  __/ / / /_/ / ";
 echo "/____/\__/\___/_/_/\__,_/  ";
 echo "                           ";
 
+echo "Stella Post-Install Script"
+echo -e "A HTPC Post-Install script for Arch Linux.\n"
 echo "You must have a functional Arch system logged in as a regular user with sudo privileges."
 echo -e "This post-install script only provides the essentials for Plasma Bigscreen and Kodi.\n"
 
