@@ -18,6 +18,7 @@ echo -e "This post-install script only provides the essentials for Plasma Bigscr
 echo "Checking updates..."
 sleep 2
 echo "y" | sudo pacman -Syu
+echo
 
 
 # Ask user input for installing SDDM
@@ -30,6 +31,7 @@ do
         * ) echo "Invalid input";;
     esac
 done
+echo
 
 
 # Ask user input for installing Kodi
@@ -42,6 +44,7 @@ do
         * ) echo "Invalid input";;
     esac
 done
+echo
 
 
 # Ask user input for installing Steam
@@ -54,12 +57,14 @@ do
         * ) echo "Invalid input";;
     esac
 done
+echo
 
 
 # Install dependencies
-echo -e "\nInstalling dependencies..."
+echo "Installing dependencies..."
 sleep 2
 echo -e "\n\n\n\ny" | sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
+echo
 
 
 # Install extra-cmake-modules dependency
@@ -68,16 +73,18 @@ tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
 echo -e "y\ny" | makepkg -sir
 cd
+echo
 
 
 # Build KDE Bigscreen
-echo -e "\nBuilding and installing KDE Bigscreen..."
+echo "Building and installing KDE Bigscreen..."
 sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plasma-bigscreen-git.tar.gz
 tar -xvf plasma-bigscreen-git.tar.gz
 cd plasma-bigscreen-git
 echo "y" | makepkg -sir
 cd
+echo
 
 
 # Clean up
@@ -87,9 +94,11 @@ echo "y" | rm -r extra-cmake-modules-git/
 echo "y" | rm -r plasma-bigscreen-git/
 echo "y" | rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
 echo "y" | sudo pacman -Rs extra-cmake-modules-git
+echo
 
 
 echo "Install completed!"
 echo "Please run SDDM and make sure everything running correctly."
 echo "If you'd like to autologin, consider to read this part of the wiki."
 echo "https://wiki.archlinux.org/title/SDDM#Autologin"
+echo
