@@ -26,7 +26,7 @@ while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
     case $sddm in
-        Y|y ) echo "Installing SDDM..."; sleep 2; echo -e  "\ny" | sudo pacman -Syu sddm;;
+        Y|y ) echo "Installing SDDM..."; sleep 2; yes | sudo pacman -Syu sddm;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -39,7 +39,7 @@ while true
 do
     read -p "Do you want to install Kodi? (y/n): " kodi
     case $kodi in
-        Y|y ) echo "Installing Kodi..."; sleep 2; echo -e  "\ny" | sudo pacman -Syu kodi;;
+        Y|y ) echo "Installing Kodi..."; sleep 2; yes | sudo pacman -Syu kodi;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -71,7 +71,7 @@ echo
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
-echo -e "y\ny" | makepkg -sir
+yes | makepkg -sir
 cd
 echo
 
@@ -82,7 +82,7 @@ sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plasma-bigscreen-git.tar.gz
 tar -xvf plasma-bigscreen-git.tar.gz
 cd plasma-bigscreen-git
-echo "y" | makepkg -sir
+yes | makepkg -sir
 cd
 echo
 
@@ -90,10 +90,10 @@ echo
 # Clean up
 echo "Cleaning up..."
 sleep 2
-echo "y" | rm -r extra-cmake-modules-git/
-echo "y" | rm -r plasma-bigscreen-git/
-echo "y" | rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
-echo "y" | sudo pacman -Rs extra-cmake-modules-git
+yes | rm -r extra-cmake-modules-git/ && \
+rm -r plasma-bigscreen-git/ && \
+rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
+yes | sudo pacman -Rs extra-cmake-modules-git && \
 echo
 
 
