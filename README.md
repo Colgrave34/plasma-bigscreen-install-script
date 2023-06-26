@@ -6,6 +6,9 @@ To use this post-install script, it is assumed that you have a functional Arch L
 Please note that this post-install script merely provides the essential components for operating Plasma Bigscreen and Kodi.  
   
 This post-install script is intended for people who have experience with Linux, and **I am not liable if you break your operating system**.  
+  
+==Plesase choose Plasma Bigscreen (x11) at login, Wayland session are not fully supported at the moment. ==  
+  
 To learn all the commands included in this post-install script, please visit the [Arch wiki](https://wiki.archlinux.org/).  
   
 # Instruction
