@@ -66,7 +66,7 @@ echo -e "\n\n\n\ny" | sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm k
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
-echo "y" | makepkg -sir
+echo -e "y\ny" | makepkg -sir
 cd
 
 
