@@ -66,7 +66,7 @@ echo -e "\n\n\n\ny" | sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm k
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
-makepkg -sir
+echo "y" | makepkg -sir
 cd
 
 
@@ -76,7 +76,7 @@ sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plasma-bigscreen-git.tar.gz
 tar -xvf plasma-bigscreen-git.tar.gz
 cd plasma-bigscreen-git
-makepkg -sir
+echo "y" | makepkg -sir
 cd
 
 
