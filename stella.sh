@@ -1,7 +1,17 @@
 #!/bin/bash
+
+echo "   _____ __       ____     ";
+echo "  / ___// /____  / / /___ _";
+echo "  \__ \/ __/ _ \/ / / __ \`/";
+echo " ___/ / /_/  __/ / / /_/ / ";
+echo "/____/\__/\___/_/_/\__,_/  ";
+echo "                           ";
+
 echo "To use this post-install script, it is assumed that you have a functional Arch Linux system logged in as a regular user with sudo privileges, and have internet connectivity and systemd installed."
 echo "Please note that this post-install script merely provides the essential components for operating Plasma Bigscreen and Kodi."
 echo "It does not eliminate the need for configuring Plasma Bigscreen, Kodi or the whole system."
+
+echo "Do you want me to install SDDM display manager for you?"
 
 echo "Installing SDDM as display manager..."
 sudo pacman -Syu sddm
