@@ -56,21 +56,21 @@ done
 
 
 # Install packages
-if sddm=true
+if $sddm=true
 then
     echo "Installing SDDM..."
     sleep 2
     echo -e  "\ny" | sudo pacman -Syu sddm
 fi
 
-if kodi=true
+if $kodi=true
 then
     echo "Installing Kodi..."
     sleep 2
     echo -e  "\ny" | sudo pacman -Syu kodi
 fi
 
-if steam=true
+if $steam=true
 then
     echo "Enabling multilib and install Steam..."
     sleep 2
