@@ -57,7 +57,7 @@ done
 
 
 # Install dependencies
-echo -e "Installing dependencies..."
+echo -e "\nInstalling dependencies..."
 sleep 2
 echo -e "\n\n\n\ny" | sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 
@@ -71,7 +71,7 @@ cd
 
 
 # Build KDE Bigscreen
-echo "Building and installing KDE Bigscreen..."
+echo -e "\nBuilding and installing KDE Bigscreen..."
 sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plasma-bigscreen-git.tar.gz
 tar -xvf plasma-bigscreen-git.tar.gz
