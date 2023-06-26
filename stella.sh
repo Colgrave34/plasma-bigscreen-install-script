@@ -24,7 +24,7 @@ while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
     case $sddm in
-        Y|y ) echo "Installing SDDM..."; sleep 2; echo -e  "\ny" | sudo pacman -Syu sddm;;
+        Y|y ) sddm=true;break;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -36,7 +36,7 @@ while true
 do
     read -p "Do you want to install Kodi? (y/n): " kodi
     case $kodi in
-        Y|y ) echo "Installing Kodi..."; sleep 2; echo -e  "\ny" | sudo pacman -Syu kodi;;
+        Y|y ) kodi=true; break;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -53,6 +53,29 @@ do
         * ) echo "Invalid input";;
     esac
 done
+
+
+# Install packages
+if sddm=true
+then
+    echo "Installing SDDM..."
+    sleep 2
+    echo -e  "\ny" | sudo pacman -Syu sddm
+fi
+
+if kodi=true
+then
+    echo "Installing Kodi..."
+    sleep 2
+    echo -e  "\ny" | sudo pacman -Syu kodi
+fi
+
+if steam=true
+then
+    echo "Installing Steam..."
+    sleep 2
+    echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
+fi
 
 
 # Install dependencies
