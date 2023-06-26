@@ -11,7 +11,7 @@ echo "/____/\__/\___/_/_/\__,_/  ";
 echo "                           ";
 
 echo "You must have a functional Arch system logged in as a regular user with sudo privileges."
-echo -e "Please note that this post-install script provides only the essential components for operating Plasma Bigscreen and Kodi.\n"
+echo -e "This post-install script only provides the essential components for Plasma Bigscreen and Kodi.\n"
 
 read -p "Do you want to install SDDM display manager? (y/n): " sddm
 
