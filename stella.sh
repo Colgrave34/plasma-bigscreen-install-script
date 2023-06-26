@@ -24,7 +24,7 @@ while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
     case $sddm in
-        Y|y ) echo "Installing SDDM"; sleep 2; echo -e  "\ny" | sudo pacman -S sddm;;
+        Y|y ) echo "Installing SDDM..."; sleep 2; echo -e  "\ny" | sudo pacman -Syu sddm;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -36,7 +36,19 @@ while true
 do
     read -p "Do you want to install Kodi? (y/n): " kodi
     case $kodi in
-        Y|y ) echo "Installing Kodi"; sleep 2; echo -e  "\ny" | sudo pacman -S kodi;;
+        Y|y ) echo "Installing Kodi..."; sleep 2; echo -e  "\ny" | sudo pacman -Syu kodi;;
+        N|n ) break;;
+        * ) echo "Invalid input";;
+    esac
+done
+
+
+# Ask user input for installing Steam
+while true
+do
+    read -p "Do you want to install Steam? (y/n): " steam
+    case $steam in
+        Y|y ) steam=true; break;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -75,15 +87,8 @@ rm -r plasma-bigscreen-git/ &&
 rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
 sudo pacman -Rs extra-cmake-modules-git
 
-echo "Enabling multilib and install steam..."
-sudo bash -c 'cat << EOF >> /etc/pacman.conf
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-EOF'
-sudo pacman -Syu steam
 
 echo "Install completed!"
 echo "Please run SDDM and make sure everything running correctly."
-
 echo "If you'd like to autologin, consider to read this part of the wiki."
 echo "https://wiki.archlinux.org/title/SDDM#Autologin"
