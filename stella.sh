@@ -26,7 +26,7 @@ while true
 do
     read -p "Do you want to install SDDM display manager? (y/n): " sddm
     case $sddm in
-        Y|y ) echo "Installing SDDM..."; sleep 2; yes | sudo pacman -Syu sddm;;
+        Y|y ) echo "Installing SDDM..."; sleep 2; echo -e "\ny" | sudo pacman -Syu sddm;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
