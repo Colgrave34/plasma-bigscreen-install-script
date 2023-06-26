@@ -57,7 +57,7 @@ done
 
 
 # Install dependencies
-echo -e "Installing dependencies...\n"
+echo -e "Installing dependencies..."
 sleep 2
 echo -e "\n\n\n\ny" | sudo pacman -Syu base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 
