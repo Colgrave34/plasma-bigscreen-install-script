@@ -72,7 +72,7 @@ fi
 
 if steam=true
 then
-    echo "Installing Steam..."
+    echo "Enabling multilib and install Steam..."
     sleep 2
     echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
 fi
