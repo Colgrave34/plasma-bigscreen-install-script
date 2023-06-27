@@ -85,7 +85,7 @@ echo "Cleaning up..."
 sleep 2
 yes | rm -r extra-cmake-modules-git/ plasma-bigscreen-git/
 yes | rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
-yes | sudo pacman -Rs extra-cmake-modules-git && \
+yes | sudo pacman -Rs extra-cmake-modules-git
 
 
 echo "Install completed!"
