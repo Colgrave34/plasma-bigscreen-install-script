@@ -56,6 +56,18 @@ do
 done
 
 
+# Ask user input for installing Retroarch
+while true
+do
+    read -p "Do you want to install Retroarch? (Y/n): " retroarch
+    case $retroarch in
+        Y|y ) echo "Installing Retroarch..."; sleep 2; yes | sudo pacman -S retroarch; break;;
+        N|n ) break;;
+        * ) echo "Invalid input";;
+    esac
+done
+
+
 # Install dependencies
 echo "Installing dependencies..."
 sleep 2
