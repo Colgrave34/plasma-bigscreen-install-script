@@ -23,9 +23,9 @@ yes | sudo pacman -Syu
 # Ask user input for installing SDDM
 while true
 do
-    read -p "Do you want to install SDDM display manager? (y/n): " sddm
+    read -p "Do you want to install SDDM display manager? (Y/n): " sddm
     case $sddm in
-        Y|y ) echo "Installing SDDM..."; sleep 2; echo -e "\ny" | sudo pacman -Syu sddm; break;;
+        Y|y ) echo "Installing SDDM..."; sleep 2; echo -e "\ny" | sudo pacman -S sddm; break;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -35,9 +35,9 @@ done
 # Ask user input for installing Kodi
 while true
 do
-    read -p "Do you want to install Kodi? (y/n): " kodi
+    read -p "Do you want to install Kodi? (Y/n): " kodi
     case $kodi in
-        Y|y ) echo "Installing Kodi..."; sleep 2; yes | sudo pacman -Syu kodi; break;;
+        Y|y ) echo "Installing Kodi..."; sleep 2; yes | sudo pacman -S kodi; break;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -47,9 +47,9 @@ done
 # Ask user input for installing Steam
 while true
 do
-    read -p "Do you want to install Steam? (y/n): " steam
+    read -p "Do you want to install Steam? (Y/n): " steam
     case $steam in
-        Y|y ) echo "Enabling multilib and install Steam..."; sleep 2; echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf; echo -e "\n\n\ny" | sudo pacman -Syu steam; break;;
+        Y|y ) echo "Enabling multilib and install Steam..."; sleep 2; echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf; echo -e "\n\n\ny" | sudo pacman -S steam; break;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
