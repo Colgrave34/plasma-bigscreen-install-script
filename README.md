@@ -31,4 +31,4 @@ At the moment I have no plans to support other distros. Right now Plasma Bigscre
 - [ ] Give choice to install application via Flatpak
 - [ ] Add support for EmulationStation
     - [RetroPie fork](https://github.com/RetroPie/EmulationStation)
-    - [EmulationStation] DE(https://es-de.org/)
+    - [EmulationStation DE](https://es-de.org/)
