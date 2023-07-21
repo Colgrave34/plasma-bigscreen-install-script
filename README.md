@@ -17,9 +17,16 @@ bash <(curl -s https://codeberg.org/Colgrave/stella/raw/branch/main/stella.sh)
 
 # Install list
 - [Plasma Bigscreen](https://aur.archlinux.org/packages/plasma-bigscreen-git)
+- [Flatpak](https://flatpak.org/)
 - [Kodi](https://kodi.tv/)
 - [Steam](https://wiki.archlinux.org/title/steam)
+- [Retroarch](https://www.retroarch.com/)
   
 # Q&A
 ## Would you support other distros? Like Fedora or Ubuntu? 
 At the moment I have no plans to support other distros. Right now Plasma Bigscreen is easier to work with on Arch than other distros (AUR is the best!), but that doesn't mean I won't change my mind in the feature. 
+
+# To-do
+- [ ] Add support for Flatpak
+- [ ] Give choice to install application via Flatpak
+- [ ] Support for emulator station? 
