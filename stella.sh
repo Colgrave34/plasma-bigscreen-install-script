@@ -1,5 +1,20 @@
 #!/bin/bash
 
+#     _____ __       ____     
+#    / ___// /____  / / /___ _
+#    \__ \/ __/ _ \/ / / __ `/
+#   ___/ / /_/  __/ / / /_/ / 
+#  /____/\__/\___/_/_/\__,_/  
+#                             
+# Title:        Stella
+# URI:          https://codeberg.org/Colgrave/stella
+# Description:  A Home Theater PC post-install script utilizes Arch and KDE Plasma Bigscreen. 
+# Author:       Colgrave
+# Author URI:   https://codeberg.org/Colgrave
+# License:      GNU GENERAL PUBLIC LICENSE Version 3
+# License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+
+
 echo "   _____ __       ____     ";
 echo "  / ___// /____  / / /___ _";
 echo "  \__ \/ __/ _ \/ / / __ \`/";
