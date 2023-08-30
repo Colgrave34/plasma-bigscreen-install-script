@@ -26,7 +26,7 @@ while ! pacman -Qs sddm > /dev/null
 do
     read -p "Do you want to install SDDM display manager? (Y/n): " sddm
         case $sddm in
-        Y|y ) echo "Installing SDDM...";sleep 2;sudo pacman -S --noconfirm;;
+        Y|y ) echo "Installing SDDM...";sleep 2;sudo pacman -S --noconfirm sddm;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
