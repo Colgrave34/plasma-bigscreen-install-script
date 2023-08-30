@@ -12,5 +12,5 @@ This post-install script is intended for people who have experience with Linux, 
 # Instruction
 Run the following command:
 ```
-bash <(curl -s https://codeberg.org/Colgrave/stella/raw/branch/main/pbinstall.sh)
+bash <(curl -s https://codeberg.org/Colgrave/plasma-bigscreen-install-script/raw/branch/main/pbinstall.sh)
 ```

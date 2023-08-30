@@ -2,7 +2,7 @@
 
 # Title:        Plasma Bigscreen Install Script
 # URI:          https://codeberg.org/Colgrave/plasma-bigscreen-install-script
-# Description:  Plasma Bigscreen install script for Arch Linux
+# Description:  Plasma Bigscreen install script for Arch Linux.
 # Author:       Colgrave
 # Author URI:   https://codeberg.org/Colgrave
 # License:      GNU GENERAL PUBLIC LICENSE Version 3
@@ -24,8 +24,8 @@ sudo pacman -Syu --noconfirm
 # If sddm is not installed, ask for user input
 while ! pacman -Qs sddm > /dev/null
 do
-    read -p "Do you want to install SDDM display manager? (Y/n): " input_sddm
-        case $input_sddm in
+    read -p "Do you want to install SDDM display manager? (Y/n): " sddm
+        case $sddm in
         Y|y ) echo "Installing SDDM...";sleep 2;sudo pacman -S --noconfirm;;
         N|n ) break;;
         * ) echo "Invalid input";;
