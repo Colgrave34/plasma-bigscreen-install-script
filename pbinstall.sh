@@ -1,31 +1,18 @@
 #!/bin/bash
 
-#     _____ __       ____     
-#    / ___// /____  / / /___ _
-#    \__ \/ __/ _ \/ / / __ `/
-#   ___/ / /_/  __/ / / /_/ / 
-#  /____/\__/\___/_/_/\__,_/  
-#                             
-# Title:        Stella
-# URI:          https://codeberg.org/Colgrave/stella
-# Description:  A Home Theater PC post-install script utilizes Arch and KDE Plasma Bigscreen. 
+# Title:        Plasma Bigscreen Install Script
+# URI:          https://codeberg.org/Colgrave/plasma-bigscreen-install-script
+# Description:  Plasma Bigscreen install script for Arch Linux
 # Author:       Colgrave
 # Author URI:   https://codeberg.org/Colgrave
 # License:      GNU GENERAL PUBLIC LICENSE Version 3
 # License URI:  https://www.gnu.org/licenses/gpl-3.0.html
 
 
-echo "   _____ __       ____     ";
-echo "  / ___// /____  / / /___ _";
-echo "  \__ \/ __/ _ \/ / / __ \`/";
-echo " ___/ / /_/  __/ / / /_/ / ";
-echo "/____/\__/\___/_/_/\__,_/  ";
-echo "                           ";
-
-echo "Stella Post-Install Script"
-echo -e "A HTPC Post-Install script for Arch Linux.\n"
+echo "Plasma Bigscreen Install Script"
+echo -e "Plasma Bigscreen install script for Arch Linux.\n"
 echo "You must have a functional Arch system logged in as a regular user with sudo privileges."
-echo -e "This post-install script only provides the essentials for Plasma Bigscreen and Kodi.\n"
+echo -e "This post-install script only provides the essentials for Plasma Bigscreen.\n"
 
 
 # Check updates
