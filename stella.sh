@@ -78,6 +78,6 @@ sudo pacman -Rs --noconfirm extra-cmake-modules-git
 
 
 echo "Install completed!"
-echo "Please restart your display manager and make sure everything running correctly."
+echo "Please restart your display manager and make sure everything is running correctly."
 echo "If you'd like to autologin, consider to read this part of the wiki."
 echo "https://wiki.archlinux.org/title/SDDM#Autologin"
