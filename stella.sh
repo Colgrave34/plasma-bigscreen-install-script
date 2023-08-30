@@ -31,7 +31,7 @@ echo -e "This post-install script only provides the essentials for Plasma Bigscr
 # Check updates
 echo "Checking updates..."
 sleep 2
-yes | sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 
 # If sddm is not installed, ask for user input
@@ -39,7 +39,7 @@ while ! pacman -Qs sddm > /dev/null
 do
     read -p "Do you want to install SDDM display manager? (Y/n): " input_sddm
         case $input_sddm in
-        Y|y ) echo "Installing SDDM...";break;;
+        Y|y ) echo "Installing SDDM...";sleep 2;sudo pacman -S --noconfirm;;
         N|n ) break;;
         * ) echo "Invalid input";;
     esac
@@ -48,7 +48,7 @@ done
 
 # Install dependencies
 echo "Installing dependencies..."
-echo -e "\n\n\n\ny" | sudo pacman -S base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
+sudo pacman -S --noconfirm base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 
 
 # Install extra-cmake-modules dependency
@@ -74,7 +74,7 @@ echo "Cleaning up..."
 sleep 2
 yes | rm -r extra-cmake-modules-git/ plasma-bigscreen-git/
 yes | rm extra-cmake-modules-git.tar.gz  plasma-bigscreen-git.tar.gz
-yes | sudo pacman -Rs extra-cmake-modules-git
+sudo pacman -Rs --noconfirm extra-cmake-modules-git
 
 
 echo "Install completed!"
