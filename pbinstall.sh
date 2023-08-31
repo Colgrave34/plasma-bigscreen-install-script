@@ -35,6 +35,7 @@ done
 
 # Install dependencies
 echo "Installing dependencies..."
+sleep 2
 sudo pacman -S --noconfirm base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 
 
