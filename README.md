@@ -7,8 +7,6 @@ Please note that this install script only provides the essential components for 
 
 This post-install script is intended for people who have experience with Linux, and **I am not liable if you break your operating system**. 
 
-**Plesase choose Plasma Bigscreen (x11) at login, Wayland session are not fully supported at the moment.** 
-
 # Instruction
 Run the following command:
 ```
