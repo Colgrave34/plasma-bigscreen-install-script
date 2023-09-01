@@ -18,11 +18,29 @@ echo -e "This post-install script only provides the essentials for Plasma Bigscr
 # Check updates
 echo "Checking updates..."
 sleep 2
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu
+
+
+# Check base-devel and fakeroot is installed or not, if not install and ask to reboot
+if ! pacman -Q base-devel > /dev/null || ! pacman -Q fakeroot > /dev/null
+then
+    echo "Installing base-devel and fakeroot dependencies..."
+    sudo pacman -S --noconfirm base-devel fakeroot
+    while true
+    do
+        echo -e "System needs a reboot after base-devel and fakeroot installed. "
+        read -p "Would you like to reboot? (Y/n): " reboot
+            case $reboot in
+            Y|y ) echo "Please rerun the script to continue after reboot.";sleep2;sudo reboot;;
+            N|n ) break;exit;;
+            * ) echo "Invalid input";;
+        esac
+    done
+fi
 
 
 # If sddm is not installed, ask for user input
-while ! pacman -Qs sddm > /dev/null
+while ! pacman -Q sddm > /dev/null
 do
     read -p "Do you want to install SDDM display manager? (Y/n): " sddm
         case $sddm in
@@ -31,12 +49,6 @@ do
         * ) echo "Invalid input";;
     esac
 done
-
-
-# Install dependencies
-echo "Installing dependencies..."
-sleep 2
-sudo pacman -S --noconfirm base-devel fakeroot plasma-pa plasma-nm konsole systemsettings
 
 
 # Install extra-cmake-modules dependency
