@@ -29,7 +29,7 @@ then
     while true
     do
         echo -e "System needs a reboot after base-devel and fakeroot installed. "
-        read -p "Would you like to reboot? (Y/n): " reboot
+        read -p "Would you like to reboot? [Y/n]: " reboot
             case $reboot in
             Y|y ) echo "Please rerun the script to continue after reboot.";sleep2;sudo reboot;;
             N|n ) break;exit;;
@@ -42,7 +42,7 @@ fi
 # If sddm is not installed, ask for user input
 while ! pacman -Q sddm > /dev/null
 do
-    read -p "Do you want to install SDDM display manager? (Y/n): " sddm
+    read -p "Do you want to install SDDM display manager? [Y/n]: " sddm
         case $sddm in
         Y|y ) echo "Installing SDDM...";sleep 2;sudo pacman -S --noconfirm sddm;;
         N|n ) break;;
