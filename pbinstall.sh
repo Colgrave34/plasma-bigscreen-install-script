@@ -52,6 +52,8 @@ done
 
 
 # Install extra-cmake-modules dependency
+echo "Building and installing KDE Bigscreen..."
+sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/extra-cmake-modules-git.tar.gz
 tar -xvf extra-cmake-modules-git.tar.gz
 cd extra-cmake-modules-git
@@ -60,8 +62,6 @@ cd
 
 
 # Build KDE Bigscreen
-echo "Building and installing KDE Bigscreen..."
-sleep 2
 curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/plasma-bigscreen-git.tar.gz
 tar -xvf plasma-bigscreen-git.tar.gz
 cd plasma-bigscreen-git
